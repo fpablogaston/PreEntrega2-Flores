@@ -1,0 +1,167 @@
+
+/* GENERAL */
+
+ul{list-style-type:none;}
+a{text-decoration: none;}
+
+li{padding:20px;margin:20px;}
+.img-fluid{width:100%;height: auto;}
+
+.p20{padding:20px;}
+.mb20{margin-bottom: 20px;}
+.m20{margin:20px;}
+.bgPrincipal{background-color: lightgrey;}
+.bgLGrey{background-color: lightgrey;}
+.flexCard{display:flex;flex-direction: column;}
+.card{border-radius: 20px; align-items: center;}
+
+*{padding:0;margin:0;}
+div h1{text-align: center;}
+.form .inputSubmit{height:40px;}
+
+/* PSEUDO HOVER */
+a:hover{font-size: 30px; background-color: var(--bg-principal);padding:4px;border-radius:10px ;}
+.card input{width:80%;height: 40px; border-radius:20px;transition: 1s all;}
+.card input:hover{box-shadow: 11px 14px 26px -6px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 11px 14px 26px -6px rgba(0,0,0,0.59);
+    -moz-box-shadow: 11px 14px 26px -6px rgba(0,0,0,0.59); cursor:pointer; }
+
+/* DESKTOP*/
+@media(min-width: 1024px){ 
+    .grid{
+        display:grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+
+header{grid-area:header;}
+main{grid-area:main;}
+footer{grid-area:footer;}
+
+ .gridMain{
+    display:grid;
+    grid-template-areas:
+    "imgPrincipal imgPrincipal imgPrincipal"
+    "encabezado encabezado encabezado"
+    "parrafoIzq imgParrafo parrafoDer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 33% 34% 33%;
+}
+
+.imgPrincipal{grid-area:imgPrincipal;}
+.encabezado{grid-area:encabezado;}
+.parrafoIzq{grid-area:parrafoIzq;}
+.imgParrafo{grid-area:imgParrafo;}
+.parrafoDer{grid-area:parrafoDer;}
+
+/* ----------- GRID INDEX */ 
+main.gridProductos{
+    display: grid;
+    grid-template-areas: 
+    "encProductos encProductos encProductos encProductos"
+    "card1 card2 card3 card4";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+}
+.encabezadoProductos{grid-template-columns: encProductos;}
+.card1{grid-area:card1;}
+.card2{grid-area:card2;}
+.card3{grid-area:card3;}
+.card4{grid-area:card4;}
+
+/* ------- GRID PRODUCTOS */
+header, footer, ul{display:flex;flex-direction: row;}
+.jCSpaceBetween{justify-content: space-between;}
+a{font-size: 22px; color:black;}
+ 
+
+/*PRODUCTOS */
+
+.header{background-color: lightgrey; margin-bottom: 5px;
+    justify-content: space-between;}
+    .footer{padding:10px;justify-content: space-around;}
+    .footer--bg
+    
+    /* ELEMENTOS */
+    .header__logo{padding:20px;}
+    .header__nav{list-style-type: none;
+    background-color: white;}
+    .boton{
+        width: 100px;
+        height: 40px;
+        background-color: white;
+        color:black;
+        font-size: 20px;
+        padding: 4px;
+        margin:10px;
+        border-radius: 20px;
+        border:1px solid black;
+        text-align: center;
+    }
+
+
+    .boton:hover{cursor:pointer;}
+    .boton-value{color:green;
+    font-size: 25px;}
+    .gridProducto{display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;}
+ }
+
+/* GRID CONTACTO */
+.gridContacto{
+    display:grid;
+    grid-template-areas: 
+    "tituloContacto tituloContacto"
+    "form datosContacto";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+}
+
+.tituloContacto{grid-area:tituloContacto;}
+.form{grid-area:form;}
+.datosContacto{grid-area: datosContacto;}
+
+/* GRID MAIN CONTACTO */
+header, footer, ul{display:flex;
+flex-direction: row;}
+.jCSpaceBetween{justify-content: space-between;}
+.form form, .datosContacto{display: flex;
+flex-direction: column;
+row-gap:10px;}
+.datosContacto{align-items:center;}
+
+/*  FLEX */
+a{font-size: 22px; color:black;}
+h1{font-size: 35px;}
+p{font-size: 20px;}
+
+  /*MOBILE*/
+
+  @media (max-width:768px){
+    header{display:flex;flex-direction: column;
+    align-items: center;}
+    ul{display:flex; flex-direction: column;
+    justify-content: center;padding-left: 0;}
+    li{padding:2px; margin:2px;}
+    main,footer{display: flex; flex-direction: column;
+    align-items: center;}
+    .img-fluid{width:100%;height: auto;}
+    .header{background-color: lightgrey; margin-bottom: 5px;
+    justify-content: space-between;}
+    .gridContacto, .form form{display:flex;
+        flex-direction: column;}
+    
+    .footer{padding:10px;justify-content: space-around;}
+    .footer--bg
+
+    .gridContacto, .form form{display:flex;
+    flex-direction: column;}
+
+*{padding:0;margin:0;}
+div h1{text-align: center;}
+ }
